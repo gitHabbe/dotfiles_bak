@@ -1,0 +1,24 @@
+gui:
+  theme:
+    selectedLineBgColor:
+      - underline
+    selectedRangeBgColor:
+      - underline
+    optionsTextColor:
+      - cyan
+
+git:
+  diffContextSize: 1
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
+
+customCommands:
+  - key: "C"
+    command: "git cz"
+    context: "files"
+    loadingText: "opening commitizen commit tool"
+    subprocess: true
+
+#os:
+      #editCommand: "nvim-nightly"
