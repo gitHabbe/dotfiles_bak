@@ -1,0 +1,24 @@
+export USER_DIR=/Users/habbe
+
+if uname -a | grep  '^Linux.*microsoft' > /dev/null; then
+  alias open='explorer.exe'
+  alias pbcopy='clip.exe'
+  alias pbpaste='powershell.exe Get-Clipboard'
+  export USER_DIR=/mnt/c/Users/habbe
+fi
+
+ZSH_AUTOSUGGEST_HISTORY_IGNORE=" *"
+setopt HIST_IGNORE_SPACE
+bindkey '^ ' autosuggest-accept
+
+LOCAL_REFS=~/.local_habbe 
+if [[ -f "$LOCAL_REFS" ]]; then
+    source $LOCAL_REFS
+fi
+
+alias v="nvim +Neotree"
+alias gcm="bash ${USER_DIR}/Dropbox/Config/git-aliases.sh"
+alias drop="cd ${USER_DIR}/Dropbox/SoftProjects"
+alias proj="cd /home/habbe/projects"
+alias dotfiles='/usr/bin/git --git-dir=/home/habbe/.dotfiles/ --work-tree=/home/habbe'
+alias lb="lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME"
