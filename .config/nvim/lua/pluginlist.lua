@@ -38,6 +38,8 @@ return {
 
         "Exafunction/codeium.vim",
 
+        "ggandor/leap.nvim",
+
         {
                 "folke/noice.nvim",
                 event = "VeryLazy",
