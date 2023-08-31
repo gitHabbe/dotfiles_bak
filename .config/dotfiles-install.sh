@@ -17,7 +17,7 @@ git clone --bare https://github.com/gitHabbe/dotfiles $HOME/.dotfiles
 # function dotfiles {
 #    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@;
 # }
-alias dotfiles='/usr/bin/git --git-dir=/home/habbe/.dotfiles/ --work-tree=/home/habbe'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 mkdir -p .config-backup
 dotfiles checkout
 if [ $? = 0 ]; then
