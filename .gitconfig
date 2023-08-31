@@ -4,7 +4,7 @@
 [init]
 	defaultBranch = main
 [core]
-        pager = delta --24-bit-color=never
+  pager = delta --24-bit-color=never
 [delta "collared-trogon"]
     # author: https://github.com/clnoll
     # commit-decoration-style = bold box ul
@@ -28,3 +28,7 @@
     # syntax-theme = Nord
 [delta]
     # features = collared-trogon
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential
