@@ -12,11 +12,12 @@
 
 # -------
 
+# apt-get install software-properties-common
+# add-apt-repository ppa:neovim-ppa/unstable
+# sudo apt-get update
+# sudo apt-get install neovim git curl zsh build-essential
 cd $HOME
 git clone --bare https://github.com/gitHabbe/dotfiles $HOME/.dotfiles
-# function dotfiles {
-#    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@;
-# }
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 mkdir -p .config-backup
 dotfiles checkout
