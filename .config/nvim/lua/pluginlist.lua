@@ -3,6 +3,10 @@ return {
                 'nvim-telescope/telescope.nvim',
                 dependencies = { 'nvim-lua/plenary.nvim' }
         },
+        { -- Fuzzy finder for telescope
+                'nvim-telescope/telescope-fzf-native.nvim',
+                build = 'make',
+        },
         { -- Smarter syntax highligher
                 'nvim-treesitter/nvim-treesitter',
                 build = ':TSUpdate',
