@@ -1,8 +1,3 @@
-apt-get update &&
-apt-get -y install software-properties-common &&
-add-apt-repository -y ppa:neovim-ppa/unstable &&
-apt-get update &&
-apt-get -y install git curl zsh build-essential neovim
 cd $HOME
 git clone --bare https://github.com/gitHabbe/dotfiles $HOME/.dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
