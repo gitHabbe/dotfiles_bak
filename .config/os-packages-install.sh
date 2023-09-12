@@ -16,5 +16,4 @@ install_packages () {
   do
     apt-get -y install $package
   done
-  
 }
