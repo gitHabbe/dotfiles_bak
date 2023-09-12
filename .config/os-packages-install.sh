@@ -9,7 +9,6 @@ install_packages () {
     curl
     zsh
     build-essential
-    neovim
   )
 
   for package in "${packages[@]}"
