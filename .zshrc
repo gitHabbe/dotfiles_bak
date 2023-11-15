@@ -110,4 +110,9 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.habbe_config
 
-test -d "$HOME/.tea" && source <("$HOME/.tea/tea.xyz/v*/bin/tea" --magic=zsh --silent)
+# bun completions
+[ -s "/home/habbe/.bun/_bun" ] && source "/home/habbe/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
