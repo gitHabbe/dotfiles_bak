@@ -1,0 +1,108 @@
+{
+  "settings": {
+    "lowerCaseAlias": false,
+    "separator": ": "
+  },
+  "commitList": [
+    {
+      "name": "Feature", "alias": "Feat", "emoji": "✨",
+      "desc": "New feature implementation"
+    },
+    {
+      "name": "Fix", "alias": "Fix", "emoji": "🐛",
+      "desc": "Bug fix"
+    },
+    {
+      "name": "Docs", "alias": "Docs", "emoji": "📚",
+      "desc": "Documentation change"
+    },
+    {
+      "name": "Cleaning", "alias": "Cln", "emoji": "🧹",
+      "desc": "Cleaning"
+    },
+    {
+      "name": "Wip", "alias": "Wip", "emoji": "🚧",
+      "desc": "Work in progress"
+    },
+    {
+      "name": "Style", "alias": "Style", "emoji": "🎨",
+      "desc": "Change code style"
+    },
+    {
+      "name": "UI", "alias": "UI", "emoji": "🎨",
+      "desc": "User interface improvement"
+    },
+    {
+      "name": "Perf", "alias": "Perf", "emoji": "⚡",
+      "desc": "Performance boost"
+    },
+    {
+      "name": "Refactor", "alias": "Ref", "emoji": "♻",
+      "desc": "Code refactoring"
+    },
+    {
+      "name": "Delete", "alias": "Del", "emoji": "🔥",
+      "desc": "Code deletion"
+    },
+    {
+      "name": "Remove", "alias": "Remove", "emoji": "🔥",
+      "desc": "Remove file"
+    },
+    {
+      "name": "Hotfix", "alias": "Hot", "emoji": "🚑",
+      "desc": "Hotfix"
+    },
+    {
+      "name": "Test", "alias": "Test", "emoji": "✅",
+      "desc": "Update tests"
+    },
+    {
+      "name": "Config", "alias": "Cfg", "emoji": "🔧",
+      "desc": "Configuration change"
+    },
+    {
+      "name": "Init", "alias": "Init", "emoji": "🎉",
+      "desc": "Initialize project"
+    },
+    {
+      "name": "Security", "alias": "Sec", "emoji": "🔒",
+      "desc": "Security"
+    },
+    {
+      "name": "Tag", "alias": "Tag", "emoji": "🔖",
+      "desc": "Release/Tag"
+    },
+    {
+      "name": "Merge", "alias": "Merge", "emoji": "🔀",
+      "desc": "Branch Merge"
+    },
+    {
+      "name": "Rename", "alias": "Rename", "emoji": "🚚",
+      "desc": "Rename file"
+    },
+    {
+      "name": "Move", "alias": "Move", "emoji": "🚚",
+      "desc": "Move file"
+    },
+    {
+      "name": "Ignore", "alias": "Ignore", "emoji": "🙈",
+      "desc": "Gitignore"
+    },
+    {
+      "name": "Package", "alias": "Pkg", "emoji": "📦",
+      "desc": "Package change"
+    },
+    {
+      "name": "Seo", "alias": "Seo", "emoji": "🔍",
+      "desc": "Search engine optimization"
+    },
+    {
+      "name": "Typo", "alias": "Typo", "emoji": "✏",
+      "desc": "Typographical error"
+    },
+    {
+      "name": "UX", "alias": "UX", "emoji": "🚸",
+      "desc": "User Experience"
+    }
+  ]
+}
