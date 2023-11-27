@@ -25,7 +25,7 @@ do
   fi
 #  commit_option="$emoji$name($alias)$SETTING_Separator$desc"
 #  text_data+=$(echo "${commit_option}\n")
-#  echo $commit_option
+#  echo "$commit_option"
    commit_option="$emoji$name$SETTING_Separator$desc"
    pad_string "$commit_option" "0" "40"
    echo -e "$padded_string ($emoji$alias)"
