@@ -33,8 +33,6 @@ customCommands:
     context: 'files'
     loadingText: 'Loading ...'
     command: 
-      # type=$(echo -e '{{ .Form.Type }}' | sed 's/^.*\(([^a-z]*([a-z]*))\).*$/\2/' &&
-      # type=$(echo -e '{{ .Form.Type }}' | sed 's/^.*(\(.*\)).*$/\1/') &&
       type=$(bash ~/.config/lazygit/HabCommits/echoFile.sh '{{ .Form.Type }}') &&
       emoji=$(jq -r --arg Type $type '.commitList[] | select(.alias == $Type).emoji' ~/.config/lazygit/HabCommits/commit-types.json) &&
       scope=$({{ if .Form.Scope }} printf "%s" "({{ .Form.Scope }})" {{ end }}) &&
@@ -42,9 +40,7 @@ customCommands:
       msg=$(printf "%s" "{{ .Form.CommitMessage }}") &&
       breaking=$({{ if .Form.Breaking }} printf "\n\n%s%s%s" "BREAKING CHANGE:" " " "{{ .Form.Breaking }}" {{ end }}) &&
       git commit -m "${emoji} ${type}${scope}${sepa}${msg}${breaking}"
-      # printf "%s" "${emoji}${type}${scope}${sepa}${msg}${breaking}"
-      # git commit -m "${emoji} ${type}${scope}${sepa}${msg}${breaking}"
-      # git commit -m "$emoji${type}${scope}${sepa}${msg}${breaking}"
+    #      printf "%s" "${emoji} ${type}${scope}${sepa}${msg}${breaking}"
     showOutput: true
     prompts:
     - type: 'input'
@@ -53,12 +49,12 @@ customCommands:
       suggestions:
         command: 'cat ~/.config/lazygit/HabCommits/CommitFile.txt'
         # command: 'bash ~/.config/lazygit/HabCommits/EchoFile.sh'
-    - type: "input"
-      title: "Scope - Add '(<scope>)'"
-      key: "Scope"
     - type: 'input'
       key: 'CommitMessage'
       title: "Commit message:"
+    - type: "input"
+      title: "Scope - Add '(<scope>)'"
+      key: "Scope"
     - type: "input"
       key: "Breaking"
       title: "Breaking change - Add '!'"
