@@ -27,7 +27,7 @@ do
 #  text_data+=$(echo "${commit_option}\n")
 #  echo "$commit_option"
    commit_option="$emoji$name$SETTING_Separator$desc"
-   pad_string "$commit_option" "0" "40"
+   pad_string "$commit_option" "0" "60"
    echo -e "$padded_string ($emoji$alias)"
    text_data+=$(echo "${padded_string} ($emoji${alias})\n")
 done < <( jq -cr '.commitList[] | (.name, .alias, .emoji, .desc)' commit-types.json)
