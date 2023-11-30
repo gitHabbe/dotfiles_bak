@@ -1,6 +1,6 @@
 [user]
 	email = 20054400+gitHabbe@users.noreply.github.com
-	name = githabbe
+	name = Habbe
 [init]
 	defaultBranch = main
 [core]
@@ -32,5 +32,3 @@
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = !/usr/bin/gh auth git-credential
-[credential]
-	helper = store
