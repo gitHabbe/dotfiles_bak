@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SETTING_LowerCaseAlias=$(jq '.settings.lowerCaseAlias' commit-types.json)
-SETTING_Separator=$(jq -r '.settings.separator' commit-types.json)
+SETTING_LowerCaseAlias=$(jq '.settings.lowerCaseAlias' commit-types2.json)
+SETTING_Separator=$(jq -r '.settings.separator' commit-types2.json)
 
 pad_string() {
      string="$1"
@@ -30,9 +30,10 @@ do
    pad_string "$commit_option" "0" "60"
    echo -e "$padded_string ($emoji$alias)"
    text_data+=$(echo "${padded_string} ($emoji${alias})\n")
-done < <( jq -cr '.commitList[] | (.name, .alias, .emoji, .desc)' commit-types.json)
+done < <( jq -cr '.commitList | map(.total//= 0) | sort_by(-.total)[] | (.name, .alias, .emoji, .desc)' commit-types2.json)
+# done < <( jq -cr '.commitList[] | (.name, .alias, .emoji, .desc)' commit-types.json)
 
 text_data=$(echo -e $text_data | tr '0' ' ')
-cat << EOF > CommitFile.txt
+cat << EOF > CommitFile2.txt
 $text_data
 EOF

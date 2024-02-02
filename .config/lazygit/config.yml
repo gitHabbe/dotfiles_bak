@@ -23,20 +23,24 @@ customCommands:
     loadingText: 'Loading ...'
     command: 
       type=$(bash ~/.config/lazygit/HabCommits/echoFile.sh '{{ .Form.Type }}') &&
-      emoji=$(jq -r --arg Type $type '.commitList[] | select(.alias == $Type).emoji' ~/.config/lazygit/HabCommits/commit-types.json) &&
+      emoji=$(jq -r --arg Type $type '.commitList[] | select(.alias == $Type).emoji' ~/.config/lazygit/HabCommits/commit-types2.json) &&
       scope=$({{ if .Form.Scope }} printf "%s" "({{ .Form.Scope }})" {{ end }}) &&
-      sepa=$(jq -r '.settings.separator' ~/.config/lazygit/HabCommits/commit-types.json) &&
+      sepa=$(jq -r '.settings.separator' ~/.config/lazygit/HabCommits/commit-types2.json) &&
       msg=$(printf "%s" "{{ .Form.CommitMessage }}") &&
       breaking=$({{ if .Form.Breaking }} printf "\n\n%s%s%s" "BREAKING CHANGE:" " " "{{ .Form.Breaking }}" {{ end }}) &&
+      printf "%s" "${type}" &&
+      tmp=$(mktemp) &&
+      jq --arg alias "$type" '.commitList |= map(if .alias == $alias then .total += 1 else . end)' ~/.config/lazygit/HabCommits/commit-types2.json > "$tmp" &&
+      mv "$tmp" ~/.config/lazygit/HabCommits/commit-types2.json &&
       git commit -m "${emoji} ${type}${scope}${sepa}${msg}${breaking}"
-    #      printf "%s" "${emoji} ${type}${scope}${sepa}${msg}${breaking}"
+      # printf "%s" "${emoji} ${type}${scope}${sepa}${msg}${breaking}"
     showOutput: true
     prompts:
     - type: 'input'
       key: 'Type'
       title: "Input title:"
       suggestions:
-        command: 'cat ~/.config/lazygit/HabCommits/CommitFile.txt'
+        command: 'cat ~/.config/lazygit/HabCommits/CommitFile2.txt'
         # command: 'bash ~/.config/lazygit/HabCommits/EchoFile.sh'
     - type: 'input'
       key: 'CommitMessage'
