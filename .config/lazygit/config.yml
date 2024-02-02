@@ -15,19 +15,6 @@ git:
 
 customCommands:
   - key: "C"
-    command: "git cz"
-    context: "files"
-    loadingText: "opening commitizen commit tool"
-    subprocess: true
-
-  - key: "<c-p>"
-    command: "bash /home/habbe/projects/HabGit/main.sh"
-    context: "files"
-    loadingText: "Pruning..."
-    description: "This is a description"
-    subprocess: true
-    showOutput: true
-
   - key: "<c-l>"
     description: "Commit with style"
     context: 'files'
