@@ -1,9 +1,12 @@
 gui:
   theme:
+    activeBorderColor:
+      - '#0fff67'
+      - bold
     selectedLineBgColor:
-      - underline
-    selectedRangeBgColor:
-      - underline
+      - '#0057ba'
+    unstagedChangesColor:
+      - '#ff4056'
     optionsTextColor:
       - cyan
 
@@ -11,11 +14,10 @@ git:
   diffContextSize: 1
   paging:
     colorArg: always
-    pager: delta --dark --paging=never
+    pager: delta --paging=never
 
 customCommands:
   - key: "C"
-  - key: "<c-l>"
     description: "Commit with style"
     context: 'files'
     loadingText: 'Loading ...'
