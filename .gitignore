@@ -1,4 +1,6 @@
 .idea/
 .config/nvim/lazy-lock.json
+.config/lazygit/state.yml
 .config/lazygit/HabCommits/CommitFile.txt
+.config/lazygit/HabCommits/CommitFile2.txt
 
